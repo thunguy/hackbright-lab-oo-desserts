@@ -4,6 +4,13 @@
 class Cupcake:
     """A cupcake."""
 
+    """cache stores all cupcake instances by name"""
+    cache = {}
+    
+    def __init__(self, name, qty):
+        self.name = name
+        self.qty = qty
+
     def __repr__(self):
         """Human-readable printout for debugging."""
 
