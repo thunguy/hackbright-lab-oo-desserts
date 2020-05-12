@@ -48,6 +48,19 @@ class Cupcake:
             
         
         return cls.cache[name]
+
+class Brownie(Cupcake):
+    
+    cache = {}
+
+    def __init__(self, name, price):
+        super().__init__(name, "chocolate", price)
+        self.qty = 0
+        self.cache[name] = self
+
+    def __repr__(self):
+        """Human-readable printout for debugging."""
+        return f'<Brownie name="{self.name}" qty={self.qty}>'
         
 
 if __name__ == '__main__':
